@@ -3,7 +3,7 @@
 A fun virtual Tarot-style web app inspired by Peter Answers. Ask a question, type your “petition,” and watch the cards reveal the answer in a mysterious way.
 
 ## Live Demo
-Check it out here: [The Cards Know Live](https://YOUR_USERNAME.github.io/the-cards-know/)
+Check it out here: [The Cards Know Live]([https://YOUR_USERNAME.github.io/the-cards-know/](https://trishadar.github.io/TheCardsKnow/))
 
 ## Features
 - Secret hidden answers in the petition.
