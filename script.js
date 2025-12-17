@@ -22,14 +22,18 @@ function revealCards() {
   });
   // show reading after all cards flipped
   const totalTime = cardElements.length * 700;
-  
+
   setTimeout(() => {
     // grab hidden answer from petition
     let hiddenAnswer = getHiddenAnswer().slice(0, -1);
     // grab the question
     const question = questionInput.value || "No question provided";
+    let answer = "The cards don't feel like answering right now.";
+    if (question != "No question provided"){
+        answer = `The cards reveal: "${hiddenAnswer || "??"}"`;
+    }
     // generate the reading
-    const readingText = `Your question: "${question}"\nThe cards reveal: "${hiddenAnswer || "??"}"`;
+    const readingText = `Your question: "${question}"\n` + answer;
     // display the reading
     readingDiv.textContent = readingText;
   }, totalTime);
