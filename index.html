@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Cards Know</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🃏 The Cards Know</h1>
+  <p class="subtitle-normal">made by trisha.</p>
+  <p class="subtitle">Ask carefully. The cards reveal all.</p>
+
+  <div class="input-box">
+    <label>Petition</label>
+  <div id="petition-input" contenteditable="true" spellcheck="false" data-placeholder="Oh ancient cards, please reveal the truth"></div>
+</div>
+
+  <div class="input-box">
+    <label>Your Question</label>
+    <input id="question" type="text" placeholder="What do I need to know?" />
+  </div>
+
+  <button onclick="revealCards()">Reveal the Cards</button>
+
+  <div id="cards" class="hidden">
+  <div class="card">
+    <div class="front">🂠</div>
+    <div class="back">🂡</div>
+  </div>
+  <div class="card">
+    <div class="front">🂠</div>
+    <div class="back">🂱</div>
+  </div>
+  <div class="card">
+    <div class="front">🂠</div>
+    <div class="back">🃁</div>
+  </div>
+</div>
+
+  <div id="reading"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

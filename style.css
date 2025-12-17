@@ -1,0 +1,153 @@
+body {
+  background: radial-gradient(circle, #0b0014, #000);
+  color: #f5e9ff;
+  font-family: "Georgia", serif;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.subtitle-normal {
+  font-style: normal;
+  opacity: 0.4;
+}
+
+.subtitle {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 10px;
+  background: #1b1026;
+  border: 1px solid #5e3b8c;
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #5e3b8c;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+button:hover {
+  background: #7c52b3;
+}
+
+#cards {
+  margin-top: 30px;
+}
+
+.card {
+  display: inline-block;
+  font-size: 4rem;
+  margin: 10px;
+  border: 2px solid #5e3b8c;
+  border-radius: 10px;
+  width: 80px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  background: #1b1026;
+  color: white;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border-radius: 10px;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.hidden {
+  display: none;
+}
+
+#reading {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-wrap;
+}
+
+/* Placeholder text styling */
+#petition-input::placeholder,
+#question::placeholder {
+  font-family: 'Georgia', serif; /* same font as input text */
+  font-size: 16px;               /* same size as input text */
+  color: rgba(255, 255, 255, 0.6); /* optional: slightly lighter for placeholder */
+}
+
+.input-box {
+  position: relative; /* needed for absolute overlay */
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+#petition-input {
+  min-height: 50px;
+  color: white;
+  border: 1px solid #5e3b8c;
+  border-radius: 5px;
+  background: #1b1026;
+  outline: none;
+  white-space: pre-wrap;
+  caret-color: white;
+  text-align: left;
+}
+
+/* Apply to both textarea (petition) and input (question) */
+#question {
+  color: white;  
+  background: #1b1026;
+  border: 1px solid #5e3b8c;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#petition-input,
+#question {
+  width: 100%;
+  box-sizing: border-box;  /* include padding and border in width */
+  display: block;          /* make both block-level */
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+#petition-input:empty::before {
+  content: attr(data-placeholder);
+  color: rgba(255,255,255,0.6);
+}
